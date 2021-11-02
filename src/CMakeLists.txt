@@ -7,6 +7,7 @@ add_library(
 )
 
 
+
 set_target_properties(${PLUGIN_NAME} PROPERTIES PREFIX "")
 set(libraryName ${PLUGIN_NAME}${CMAKE_SHARED_LIBRARY_SUFFIX})
 
@@ -22,14 +23,22 @@ configure_file(
 )
 
 
+
 target_include_directories(
     ${PLUGIN_NAME}
     SYSTEM PRIVATE
     ${USD_INCLUDE_DIR}
+    ${BOOST_INCLUDE_DIR}
+    ${TBB_INCLUDE_DIR}
+    ${PYTHON_INCLUDE_DIR}
 )
 
-link_directories(${USD_LIBRARY_DIR})
+
+link_directories(
+    ${KATANA_LIBRARY_DIR}
+)
+
 target_link_libraries(
     ${PLUGIN_NAME}
-    PRIVATE tf ar
+    PRIVATE Fntf Fnar
 )
