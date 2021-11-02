@@ -10,10 +10,10 @@ You'll need the following libraries to build the project
 
 | Package           | Version        |
 | ----------------- | -------------- |
-| CMAKE             | 3.0+           |
-| USD               | 21.0+          |
+| CMake             | 3.0+           |
+| Katana            | 4.0+           |
 
-Configure the PXR\_USD\_LOCATION environment variable or pass the location of the installed USD using -D\<varname\>=\<path\> to cmake
+Configure the KATANA\_HOME environment variable or pass the location of the installed USD using -D\<varname\>=\<path\> to cmake
 
 
 
